@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+
+<mapper namespace="com.qf.dao.GoodsDao">
+    <resultMap type="Goods" id="map">
+        <id column="id" property="id" />
+        <result column="goodsname" property="goodsname" />
+        <result column="img" property="img" />
+        <result column="newprice" property="newprice" />
+        <result column="oldprice" property="oldprice" />
+        <result column="desc" property="desc" />
+        <result column="addr" property="addr" />
+        <result column="time" property="time" />
+        <result column="collect" property="collect" />
+        <result column="uno" property="uno" />
+        <result column="no" property="no" />
+    </resultMap>
+    <insert id="fabu" parameterType="Goods">
+        insert into goods(goodsname,img,newprice,oldprice,gdesc,addr,gtime,uno,gno) values(#{goodsname},#{img},#{newprice},#{oldprice},#{gdesc},#{addr},#{gtime},#{uno},#{gno})
+
+    </insert>
+    <select id="shops" resultMap="map" parameterType="int">
+        select * from goods where id=#{id}
+    </select>
+</mapper>
