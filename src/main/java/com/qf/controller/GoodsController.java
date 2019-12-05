@@ -81,4 +81,22 @@ public class GoodsController {
         msv.mess(message);
 
     }
+    /* 搜索*/
+    @RequestMapping("/findByGoodsname")
+    public List<Goods> findByGoodsname(@RequestParam("goodsname")String goodsname){
+        return gsv.findByGoodsname(goodsname);
+    }
+    @RequestMapping("/tuijian")
+    public List<Goods> tuijian(@RequestParam("collect")String collect){
+        return gsv.tuijian(collect);
+    }
+    @RequestMapping("/zuixin")
+    public List <Goods>zuixin(@RequestParam("gtime")String gtime){
+        return gsv.zuixin(gtime);
+    }
+    /*分类*/
+    @RequestMapping("/findByGno")
+    public List<Goods> findByGno(@RequestParam("gno") Integer gno){
+        return  gsv.findByGno(gno);
+    }
 }

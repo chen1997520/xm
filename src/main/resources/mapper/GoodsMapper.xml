@@ -24,4 +24,16 @@
     <select id="shops" resultMap="map" parameterType="int">
         select * from goods where id=#{id}
     </select>
+    <select id="findByGoodsname" resultType="goods" parameterType="string">
+        select * from  goods where goodsname LIKE  #{value}
+    </select>
+    <select id="tuijian" resultType="goods" parameterType="string">
+        select * from  goods  ORDER by gtime
+    </select>
+    <select id="zuixin" resultType="goods" parameterType="string">
+        select * from  goods  ORDER by collect
+    </select>
+    <select id="findByGno" resultType="goods" parameterType="int">
+        select * from  goods where gno=#{value}
+    </select>
 </mapper>
