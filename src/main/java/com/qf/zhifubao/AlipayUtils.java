@@ -29,7 +29,7 @@ public class AlipayUtils {
                 "    \"out_trade_no\":\""+random+"\"," +
                 "    \"product_code\":\"FAST_INSTANT_TRADE_PAY\"," +
                 "    \"total_amount\":88.88," +
-                "    \"subject\":\"Iphone6 16G\"," +
+                "    \"subject\":\""+tao+"\"," +
                 "    \"body\":\"Iphone6 16G\"," +
                 "    \"passback_params\":\"merchantBizType%3d3C%26merchantBizNo%3d2016010101111\"," +
                 "    \"extend_params\":{" +
